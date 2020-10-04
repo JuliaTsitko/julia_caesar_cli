@@ -1,6 +1,6 @@
-const program = require('./src/bin/index').program;
+const program = require('./src/bin').program;
 const process = require('process');
-const returnCaesarCypherResult = require('./src/caesar_cypher/index').returnCaesarCypherResult;
+const returnCaesarCypherResult = require('./src/caesar_cypher').returnCaesarCypherResult;
 const readAndWrite = require('./src/bin/readAndWrite').readAndWrite;
 
 const { shift, input, output, action } = program;
