@@ -1,0 +1,19 @@
+{
+  "name": "julia_caesar_cli",
+  "version": "1.0.0",
+  "description": "CLI to encript/decipher caesar cipher",
+  "main": "julia_caesar_cli.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliaTsitko/julia_caesar_cli.git"
+  },
+  "author": "Julia Tsitko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuliaTsitko/julia_caesar_cli/issues"
+  },
+  "homepage": "https://github.com/JuliaTsitko/julia_caesar_cli#readme",
+  "dependencies": {
+    "commander": "^6.1.0"
+  }
+}
