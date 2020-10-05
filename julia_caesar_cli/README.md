@@ -16,14 +16,16 @@ Program accepts next require parameters:
 
 2. **-s, --shift:** transformation shift, should be **greater then 0** and **less then 27** (not equal in both cases). ***is required***
 
-3. **-i, --input:** string or path to file (ex. ./src/input/input.txt). ***is required***
+3. **-i, --input:** nothing or path to file (ex. ./src/input/input.txt). ***is required***
  
-4. **-o, --output:** path to file (ex. ./src/input/output.txt). ***is required***
+4. **-o, --output:** nothing or path to file (ex. ./src/input/output.txt). ***is required***
 
 # Usage
 
 - Enter or paste text in input.txt or creat text file in any destination
 
-- Run command with your options `node julia_caesar_cli -a [action_type] -s [shift_num] -i [path to file or string] -o [path to file]`
+- Run command with your options `node julia_caesar_cli -a [action_type] -s [shift_num] -i [path to file or nothing] -o [path to file or nothing]`
+
+- Pass no params to -i and -o to enable console live cypher
 
 - Get result in output file or command line
