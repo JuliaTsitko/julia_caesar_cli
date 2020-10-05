@@ -1,28 +1,5 @@
 const program = require('./src/bin').program;
-const process = require('process');
-const returnCaesarCypherResult = require('./src/caesar_cypher').returnCaesarCypherResult;
-const readAndWrite = require('./src/bin/readAndWrite').readAndWrite;
+const doCypher = require('./src/bin/doCypher').doCypher;
 
-const { shift, input, output, action } = program;
-
-if (typeof input === 'boolean' && typeof output === 'boolean') {
-    process.stdin.setEncoding('utf8');
-
-    // TODO: if input === boolean, output === string stdin + write
-    // TODO: separate read and write func
-    // TODO: do all scenarios
-    if (typeof output === 'boolean') {
-        process.stdin.on('readable', () => {
-            let chunk;
-            while ((chunk = process.stdin.read()) !== null) {
-                process.stdout.write(`Caesar cypher result: ${returnCaesarCypherResult(action, chunk, shift)}`);
-            }
-        });
-    }
-
-    process.stdin.on('end', () => {
-        process.stdout.write('end');
-    });
-} else {
-    readAndWrite(input, output, returnCaesarCypherResult, action, shift);
-}
+const { input, output, action, shift } = program;
+doCypher(input, output, action, shift);

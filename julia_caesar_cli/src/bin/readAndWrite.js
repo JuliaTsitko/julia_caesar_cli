@@ -1,31 +1,15 @@
 const fs = require('fs');
+const readFile = require('./readFile').readFile;
+const writeFile = require('./writeFile').writeFile;
+const inputErr = require('./errorDescription').inputErr;
+const outputErr = require('./errorDescription').outputErr;
 
 const readAndWrite = (inputPath, outputPath, cypher, action, shift) => {
-    const errorDescription = (parameter, err) => `Program failed, ${parameter} parameter is invalid for some reasons: ${err}`;
-
-
-    fs.readFile(inputPath, 'utf8' , (err, data) => {
-        if (err) {
-            const error = errorDescription('-i/--input', err);
-            console.error(error);
-            return;
-        }
-
+    readFile(inputPath, inputErr, (data) => {
         const outputString = cypher(action, data, shift);
-        fs.readFile(outputPath, 'utf8', (err, data) => {
-            if (err) {
-                const error = errorDescription('-o/--output', err);
-                console.error(error);
-                return;
-            }
-
+        readFile(outputPath, outputErr, (data) => {
             const outputValue = data + outputString;
-            fs.writeFile(outputPath, outputValue, err => {
-                if (err) {
-                    const error = errorDescription('-o/--output', err);
-                    console.error(error);
-                }
-            });
+            writeFile(outputPath, outputValue, outputErr);
         });
     });
 };
