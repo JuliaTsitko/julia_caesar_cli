@@ -7,7 +7,7 @@ function returnShiftedAlphabet(alphabet, shift) {
     return shiftedAlphabet;
 }
 
-function returnCaesarCypherResult(action, input, shift) {
+function returnCaesarCipherResult(action, input, shift) {
     const alphabet = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz';
     const shiftedAlphabet = returnShiftedAlphabet(alphabet, shift);
     let primaryAlphabet;
@@ -36,4 +36,4 @@ function returnCaesarCypherResult(action, input, shift) {
     return output;
 }
 
-module.exports.returnCaesarCypherResult = returnCaesarCypherResult;
+module.exports.returnCaesarCipherResult = returnCaesarCipherResult;

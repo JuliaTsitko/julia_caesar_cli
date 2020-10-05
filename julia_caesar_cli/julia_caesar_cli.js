@@ -1,5 +1,5 @@
 const program = require('./src/bin').program;
-const doCypher = require('./src/bin/doCypher').doCypher;
+const doCipher = require('./src/bin/doCipher').doCipher;
 
 const { input, output, action, shift } = program;
-doCypher(input, output, action, shift);
+doCipher(input, output, action, shift);
