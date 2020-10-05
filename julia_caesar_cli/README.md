@@ -6,7 +6,7 @@ A CLI tool to encode or decode a text by [Caesar cipher.](https://en.wikipedia.o
 
 - Clone or download project from [repository.](https://github.com/JuliaTsitko/julia_caesar_cli)
 
-- Run `npm install` in project root directory (julia_caesar_cli) to install [commander](https://www.npmjs.com/package/commander) dependency.
+- Run `npm install` in project root directory (julia_caesar_cli/julia_caesar_cli) to install [commander](https://www.npmjs.com/package/commander) dependency.
 
 # Options
 
@@ -26,6 +26,6 @@ Program accepts next require parameters:
 
 - Run command with your options `node julia_caesar_cli -a [action_type] -s [shift_num] -i [path to file or nothing] -o [path to file or nothing]`
 
-- Pass no params to -i and -o to enable console live cypher
+- Pass no params to -i and -o to enable console live cipher
 
 - Get result in output file or command line
